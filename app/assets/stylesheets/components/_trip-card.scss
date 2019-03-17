@@ -1,0 +1,218 @@
+.card-trip {
+  overflow: hidden;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+
+}
+.card-body{
+  background-color: #Fff;
+  flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.card-trip img {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 36px;
+  font-weight: bold;
+  margin: 15px;
+  text-align: center;
+}
+.card-trip h3 {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 14px;
+  text-align: left;
+  margin: 15px;
+}
+.card-trip h4,i {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 18px;
+  // text-align: center;
+
+}
+
+.card-trip p {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-trip .booking-card-infos {
+  display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 10% auto;
+}
+
+.card-trip-right{
+  overflow: hidden;
+  height: 100%;
+  background: white;
+  flex-grow: 1;
+}
+
+// index cards
+.index-cards{
+  width: 90%;
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.img-card{
+      border-radius: 3px 3px 0 0;
+  min-height: 200px;
+  max-height:200px;
+  width: 100%;
+}
+.card-index{
+  background-color: #fff;
+  flex-grow: 1 0 1;
+    width: 28%;
+    margin: 10px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+.card-index:hover{
+
+
+}
+// ----- TRIP INDEX CARDS ------------
+.trips-index-header{
+  margin: 20px auto;
+
+}
+.trip-search{
+     margin: 10px;
+    width: 57.2%;
+    height: 4.8vh;
+    padding-top: 2px;
+}
+.trip-search #query{
+      height: -webkit-fill-available;
+      font-size: 1.2rem;
+}
+.trip-index-container{
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  margin: 0;
+}
+.trip-index-cards{
+  width: 100%;
+
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.trip-img-card{
+
+  min-height: 200px;
+  max-height:200px;
+  width: 100%;
+}
+.trip-card-index{
+  background-color: #fff;
+      flex: 0 0 1;
+    width: 47%;
+    max-height: 400px;
+    margin: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+.index-card-text{
+      margin-top: 0;
+    margin-bottom: 1rem;
+    max-height: 70px;
+    overflow: scroll;
+}
+// ------SHOW TRIP ---------
+
+.show-card-container{
+  height: 80vh;
+  padding-top: 10%;
+
+}
+.show-card-trip {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.show-card-trip img {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+.show-card-items{
+ margin: 0 auto;
+height: inherit;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+
+// ----- MEDIA FUCKING QUERIES -------
+@media screen and (max-width: 992px) {
+  .card-index{
+  flex-grow: 1;
+    width: 50%;
+    margin: 10px auto;
+  }
+  .index-cards{
+    width: 100;
+    margin: 10px auto;
+  }
+  .trip-card-index{
+  flex-grow: 1;
+    width: 50%;
+    margin: 10px auto;
+  }
+  .trip-index-cards{
+    width: 100;
+    margin: 10px auto;
+  }
+
+}
+
+
+ @media screen and (max-width: 600px) {
+.card-index{
+  flex-grow: 1;
+    width: 90%;
+    margin: 10px auto;
+
+  }
+   .trip-index-cards{
+    width: 100;
+    margin: 10px auto;
+  }
+  .trip-card-index{
+  flex-grow: 1;
+    width: 50%;
+    margin: 10px auto;
+  }
+  .trip-index-cards{
+    width: 100;
+    margin: 10px auto;
+  }
+}

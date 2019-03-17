@@ -1,0 +1,29 @@
+  <div class="show-card-container">
+    <div class="show-card-trip">
+      <%= cl_image_tag @trip.photo %>
+
+      <div class="show-card-items">
+        <h2><%= @trip.name %></h2>
+         <p><%= @trip.destination %></p>
+        <p class="card-trip-infos">Trip length: <%= @trip.length %> days Cost: $<%= @trip.cost %>
+        </p>
+        <%= link_to "Book now", new_trip_booking_url(@trip), class: "btn btn-flat show-btn book-btn" %>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="review-container">
+    <div class="review-h3"><h3>Reviews </h3></div>
+    <div class="review-view ">
+      <% @trip.reviews.each do |review| %>
+      <div class="review-list"><%= review.description %>
+        <hr class="review-line">
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+    <div class="">
+      <%= link_to "Write a review", new_trip_review_path(@trip), class: "btn btn-flat review-btn" %>
+    </div>

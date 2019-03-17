@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Your amazing app for booking customized trips.">
+    <title>Better Bookings | Book your trip as a pro</title>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_pack_tag 'application' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+  </head>
+  <body>
+    <% unless request.url == "http://localhost:3000/" ||  request.url == "https://airbnb-danlin2902.herokuapp.com/" %>
+    <%= render 'shared/navbar' %>
+    <% end %>
+
+    <%= render 'shared/flashes' %>
+    <%= yield %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+
+  </body>
+</html>

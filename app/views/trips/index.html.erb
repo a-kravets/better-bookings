@@ -1,0 +1,50 @@
+<div style="padding: 17px;">
+
+
+
+<div class="trips-index-header">
+
+
+
+<div class="trip-search">
+
+<%= form_tag trips_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a trip"
+  %>
+<% end %>
+</div>
+   <!-- hey -->
+
+<div class="trip-index-container">
+<div class="trip-index-cards " >
+  <% @trips.each do |trip| %>
+
+      <%= link_to trip_path(trip) do %>
+
+  <div class="trip-card-index">
+    <%= cl_image_tag trip.photo, class: "img-card" %>
+    <div class="card-body">
+      <h5 class="card-title"><%= link_to trip.name, trip_path(trip) %></h5>
+      <p class="index-card-text"> <%= trip.destination %></p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <% end %><% end %>
+</div>
+
+<div
+  id="map"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+</div>
+
+<!-- map -->
+
+
+
+
+
